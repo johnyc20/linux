@@ -37,7 +37,7 @@ function ssl-gen-cert () {
         apg -n1 -m8 -x8 -t
 
         echo "**Genrating ssl key ..."
-        openssl genrsa -des3 -out ${WD}/${1}.key 512
+        openssl genrsa -des3 -out ${WD}/${1}.key ${KEYLEN} 
 
         echo "**Generating certificate request... " 
         openssl req -new -key ${WD}/${1}.key -out ${WD}/${1}.csr
