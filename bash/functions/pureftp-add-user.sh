@@ -35,7 +35,7 @@ function pureftp-add-user () {
     RGROUP="dboxgroup";
     RHOME="/space/ftproot";
     UHOME="${RHOME}/${USER}";
-    UQUOTA="0";
+    UQUOTA="-1";
     FPASS=$(apg -n1 -m8 -x8 -MCNL -t);
     PASS=$(echo ${FPASS} | cut -f1 -d' ');
     #
